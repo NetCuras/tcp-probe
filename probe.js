@@ -212,7 +212,13 @@ function probe(options, callback) {
                 connectTime = (connectTimeArr[0] * 1e9 + connectTimeArr[1]) / 1e6;
 
                 // Write the request payload as soon as we're connected
-                s.write(options.request);
+                if (options.request) {
+                    try {
+                        s.write(options.request);
+                    } catch (e) {
+                        lastErr = lastErr ?? Error('Socket Write Error');
+                    }
+                }
 
                 // Accumulate data
                 responseBuffer = Buffer.alloc(0);

@@ -61,7 +61,6 @@ function probe(options, callback) {
         request: Buffer.alloc(0),
         exitRequest: undefined,
         match: undefined,
-        exit: Buffer.alloc(0),
         maxResponseBytes: 50000,
         capture: false,
         noDelay: true,

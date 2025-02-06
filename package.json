@@ -1,25 +1,26 @@
 {
-  "name": "tcp-ping",
-  "version": "0.1.1",
-  "description": "A ping utility using TCP connection",
-  "main": "ping.js",
+  "name": "tcp-probe",
+  "version": "0.2.1",
+  "description": "A TCP ping tool to probe services and validate responses.",
+  "main": "probe.js",
   "scripts": {
     "test": "echo 0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesolyromek/tcp-ping.git"
+    "url": "https://github.com/NetCuras/tcp-probe.git"
   },
   "keywords": [
     "ping",
+    "probe",
     "util",
     "tcp",
     "availability"
   ],
-  "author": "Adam Paszke",
+  "author": "Brant Wedel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wesolyromek/tcp-ping/issues"
+    "url": "https://github.com/NetCuras/tcp-probe/issues"
   },
-  "homepage": "https://github.com/wesolyromek/tcp-ping"
+  "homepage": "https://github.com/NetCuras/tcp-probe"
 }

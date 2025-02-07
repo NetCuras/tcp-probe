@@ -203,8 +203,9 @@ function probe(options, callback) {
                 if (didPushResults) {
                     return;
                 }
-                lastErr = lastErr ?? Error('Response timeout');
-                probeResultCheck({ err: Error('Response timeout') });
+                let timeoutErr = s.connecting ? Error('Request timeout') : Error('Response timeout')
+                lastErr = lastErr ?? timeoutErr;
+                probeResultCheck({ err: timeoutErr });
             }, options.timeout);
 
             s.connect(options.port, options.address, function onConnect() {
@@ -290,11 +291,7 @@ function probe(options, callback) {
 
             // guaranteed to be called
             s.on('close', function onClose() {
-                probeResultCheck({});
-            });
-
-            s.setTimeout(options.timeout, function() {
-                probeResultCheck({});
+                probeResultCheck();
             });
 
             return;

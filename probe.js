@@ -203,7 +203,7 @@ function probe(options, callback) {
                 if (didPushResults) {
                     return;
                 }
-                let timeoutErr = s.connecting ? Error('Request timeout') : Error('Response timeout')
+                let timeoutErr = s.connecting ? Error('Request timeout') : Error('Response timeout');
                 lastErr = lastErr ?? timeoutErr;
                 probeResultCheck({ err: timeoutErr });
             }, options.timeout);

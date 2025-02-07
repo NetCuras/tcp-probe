@@ -1,7 +1,7 @@
 tcp-probe
 =========
 
-TCP probe utility for node.js. This tool allows you to test if a chosen address accepts connections at a desired port and measure latency, as well as validate responses and capture data. It's ideal for service availability testing and more advanced probing tasks. Derived from the `tcp-ping` library https://github.com/apaszke/tcp-ping
+TCP probe utility for node.js. This tool allows you to test if a chosen address accepts connections at a desired port and measure latency, as well as validate responses and capture data. It's ideal for service availability testing and more advanced probing tasks. Forked from [tcp-ping](https://github.com/apaszke/tcp-ping).
 
 ### Install
 
@@ -72,4 +72,4 @@ tcpp.probe({
 
 ```
 
-The `tcp-probe` library is based on the original `tcp-ping` library by Adam Paszke, with added request and response validation capabilities.
+The `tcp-probe` library is forked from the original [tcp-ping](https://github.com/apaszke/tcp-ping) library by Adam Paszke, with added request and response validation capabilities.

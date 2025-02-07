@@ -1,6 +1,6 @@
 {
   "name": "tcp-probe",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A TCP ping tool to probe services and validate responses.",
   "main": "probe.js",
   "scripts": {
